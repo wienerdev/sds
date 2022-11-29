@@ -64,7 +64,7 @@ public class CandidatosService {
 
     private Map<String, BigDecimal> recuperarIMCMedioPorIdade(List<CandidatoDTO> dto) {
         Map<String, BigDecimal> listaMediaImc = new LinkedHashMap<>();
-        DateTimeFormatter dateformatter = DateTimeFormatter.ofPattern("d/MM/yyyy");
+        DateTimeFormatter dateformatter = DateTimeFormatter.ofPattern("dd/mm/yyyy");
 
         dto.forEach(cand -> {
             cand.setImc(cand.getPeso() / Math.pow(cand.getAltura(), 2));
