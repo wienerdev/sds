@@ -185,7 +185,8 @@ public class CandidatosService {
 
 		qtdPessoasPorTipoSanguineo.put(
 			"AB+",
-			tipoAMais.size()+tipoAMenos.size()+tipoBMais.size()+tipoBMenos.size()+tipoABMais.size()+tipoABMenos.size()+tipoOMais.size()+tipoOMenos.size());
+			tipoAMais.size()+tipoAMenos.size()+tipoBMais.size()+tipoBMenos.size()+
+			tipoABMais.size()+tipoABMenos.size()+tipoOMais.size()+tipoOMenos.size());
 
 		qtdPessoasPorTipoSanguineo.put(
 			"AB-",
