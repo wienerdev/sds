@@ -96,8 +96,8 @@ public class InfoCandidatosService {
 				.stream().filter(mulher -> mulher.getImc() > 30)
 				.collect(Collectors.toList());
 
-		percentuaisObesidade.put("homens", listaHomemObeso.size()*listaHomens.size()/100.00);
-		percentuaisObesidade.put("mulheres", listaMulherObesa.size()*listaMulherObesa.size()/100.00);
+		percentuaisObesidade.put("Homens", listaHomemObeso.size()*listaHomens.size()/100.00);
+		percentuaisObesidade.put("Mulheres", listaMulherObesa.size()*listaMulherObesa.size()/100.00);
 
 		return percentuaisObesidade;
 	}
