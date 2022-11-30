@@ -40,11 +40,9 @@ public class Candidato {
     @Column(name = "rg")
     private String rg;
 
-    @NotNull
     @Column(name = "dt_nascimento")
     private String dtNascimento;
 
-    @NotNull
     @Column(name = "sexo")
     private String sexo;
 
@@ -70,7 +68,6 @@ public class Candidato {
     @Column(name = "bairro")
     private String bairro;
 
-    @NotBlank
     @Column(name = "cidade")
     private String cidade;
 
@@ -83,17 +80,14 @@ public class Candidato {
     @Column(name = "celular")
     private String celular;
 
-    @NotNull
     @Positive
     @Column(name = "altura")
     private Double altura;
 
-    @NotNull
     @Positive
     @Column(name = "peso")
     private Integer peso;
 
-    @NotNull
     @Column(name = "tipo_sanguineo")
     private String tipoSanguineo;
 
