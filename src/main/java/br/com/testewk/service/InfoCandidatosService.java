@@ -29,7 +29,7 @@ public class InfoCandidatosService {
         popularEntidadesNoBanco(dto);
         response.setQtdPessoasPorEstado(dadosCandidatosImpl.calcularNumeroDePessoasPorEstado(dto));
         response.setMediaImcPorIdade(dadosCandidatosImpl.recuperarIMCMedioPorIdade(dto));
-        response.setPercentuaisObesidadePorSexo(dadosCandidatosImpl.recuperarPecentualObesidade(dto));
+        response.setPercentuaisObesidadePorSexo(dadosCandidatosImpl.recuperarPecentualObesidadePorSexo(dto));
 		response.setMediaIdadePorTipoSanguineo(dadosCandidatosImpl.recuperarMediaIdadePorTipoSanguineo(dto));
 		response.setQtdDoadoresPorTipoSanguineo(dadosCandidatosImpl.recuperarQtdDoadoresPorTipoSanguineo(dto));
         return response;

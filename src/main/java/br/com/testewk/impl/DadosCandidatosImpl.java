@@ -17,10 +17,12 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Component;
 
 import br.com.testewk.dto.CandidatoDTO;
+import br.com.testewk.model.IDadosCandidatos;
 
 @Component
-public class DadosCandidatosImpl {
+public class DadosCandidatosImpl implements IDadosCandidatos {
 
+	@Override
     public Map<String, Integer> calcularNumeroDePessoasPorEstado(List<CandidatoDTO> dto) {
 		Map<String, Integer> listaPessoas = new TreeMap<>();
 		ArrayList<String> listaEstados = new ArrayList<>();
@@ -37,7 +39,8 @@ public class DadosCandidatosImpl {
 
 		return listaPessoas;
 	}
-
+	
+	@Override
 	public Map<String, BigDecimal> recuperarIMCMedioPorIdade(List<CandidatoDTO> dto) {
 		DateTimeFormatter dateformatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
@@ -49,7 +52,8 @@ public class DadosCandidatosImpl {
 		return calcularImcMedioPorIdade(dto);
 	}
 
-	public Map<String, Double> recuperarPecentualObesidade(List<CandidatoDTO> dto) {
+	@Override
+	public Map<String, Double> recuperarPecentualObesidadePorSexo(List<CandidatoDTO> dto) {
 		Map<String, Double> percentuaisObesidade = new HashMap<>();
 
 		List<CandidatoDTO> listaHomens = dto.stream()
@@ -74,6 +78,7 @@ public class DadosCandidatosImpl {
 		return percentuaisObesidade;
 	}
 
+	@Override
 	public Map<String, BigDecimal> recuperarMediaIdadePorTipoSanguineo(List<CandidatoDTO> dto) {
 		Map<String, BigDecimal> mediaIdadePorTipoSangue = new LinkedHashMap<>();
 
@@ -104,6 +109,7 @@ public class DadosCandidatosImpl {
 		return mediaIdadePorTipoSangue;
 	}
 
+	@Override
 	public Map<String, Integer> recuperarQtdDoadoresPorTipoSanguineo(List<CandidatoDTO> dto) {
 		Map<String, Integer> qtdPessoasPorTipoSanguineo = new LinkedHashMap<>();
 

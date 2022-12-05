@@ -8,10 +8,10 @@ import br.com.testewk.dto.CandidatoDTO;
 
 public interface IDadosCandidatos {
 
-    public Map<String, Integer> qtdPessoasPorEstado(List<CandidatoDTO> dto);
-    public Map<String, BigDecimal> mediaImcPorIdade(List<CandidatoDTO> dto);
-    public Map<String, Double> percentuaisObesidadePorSexo(List<CandidatoDTO> dto);
-    public Map<String, BigDecimal> mediaIdadePorTipoSanguineo(List<CandidatoDTO> dto);
-    public Map<String, Integer> qtdDoadoresPorTipoSanguineo(List<CandidatoDTO> dto);
+    public Map<String, Integer> calcularNumeroDePessoasPorEstado(List<CandidatoDTO> dto);
+    public Map<String, BigDecimal> recuperarIMCMedioPorIdade(List<CandidatoDTO> dto);
+    public Map<String, Double> recuperarPecentualObesidadePorSexo(List<CandidatoDTO> dto);
+    public Map<String, BigDecimal> recuperarMediaIdadePorTipoSanguineo(List<CandidatoDTO> dto);
+    public Map<String, Integer> recuperarQtdDoadoresPorTipoSanguineo(List<CandidatoDTO> dto);
     
 }
